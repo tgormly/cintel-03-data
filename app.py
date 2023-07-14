@@ -1,4 +1,9 @@
 """
+Tim Gormly
+Continuous Intelligence
+Module 03
+07/13/2023
+
 Purpose: Use Python to create a continuous intelligence and 
 interactive analytics dashboard using Shiny for Python.
 
