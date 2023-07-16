@@ -22,9 +22,9 @@ def get_iris_server_functions(input, output, session):
     """Define functions to create UI outputs."""
 
     path_to_data = (
-        pathlib.Path(__file__).parent.joinpath("data").joinpath("iris.xlsx")
+        pathlib.Path(__file__).parent.joinpath("data").joinpath("iris.csv")
     )
-    original_df = pd.read_excel(path_to_data)
+    original_df = pd.read_csv(path_to_data)
     total_count = len(original_df)
 
     @output
@@ -43,7 +43,7 @@ def get_iris_server_functions(input, output, session):
     @render.text
     def iris_filter_string():
         input_petal_length_range = input.IRIS_PETAL_LENGTH_RANGE()
-        input_petal_width_range = input.IRIS_PETAL_LENGTH_RANGE()        
+        input_petal_width_range = input.IRIS_PETAL_WIDTH_RANGE()        
         length_min = input_petal_length_range[0]
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
@@ -57,7 +57,7 @@ def get_iris_server_functions(input, output, session):
         logger.debug("Triggered iris_filter_record_count_string")
         df = original_df.copy()
         input_petal_length_range = input.IRIS_PETAL_LENGTH_RANGE()
-        input_petal_width_range = input.IRIS_PETAL_LENGTH_RANGE()        
+        input_petal_width_range = input.IRIS_PETAL_WIDTH_RANGE()        
         length_min = input_petal_length_range[0]
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
@@ -80,7 +80,7 @@ def get_iris_server_functions(input, output, session):
         logger.debug("Triggered iris_filtered_table")
         df = original_df.copy()
         input_petal_length_range = input.IRIS_PETAL_LENGTH_RANGE()
-        input_petal_width_range = input.IRIS_PETAL_LENGTH_RANGE()        
+        input_petal_width_range = input.IRIS_PETAL_WIDTH_RANGE()        
         length_min = input_petal_length_range[0]
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
@@ -141,7 +141,7 @@ def get_iris_server_functions(input, output, session):
 
         df = original_df.copy()
         input_petal_length_range = input.IRIS_PETAL_LENGTH_RANGE()
-        input_petal_width_range = input.IRIS_PETAL_LENGTH_RANGE()        
+        input_petal_width_range = input.IRIS_PETAL_WIDTH_RANGE()        
         length_min = input_petal_length_range[0]
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
