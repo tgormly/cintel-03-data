@@ -20,6 +20,11 @@ def get_mtcars_inputs():
             max=35,
             value=[10, 35],
         ),
+        ui.input_checkbox_group(
+            "Cylinders", 
+            "Cylinders:", 
+            {"a": "2 Cylinders", "b": "4 Cylinders", "c": "6 Cylinders", "d": "8 Cylinders"}
+        ),
         ui.tags.hr(),
         ui.tags.section(
             ui.h3("MT Cars Table"),
