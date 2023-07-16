@@ -59,6 +59,9 @@ app_ui = ui.page_navbar(
                     ui.tags.li(
                         "To explore the Penguins Dataset, click the 'Penguins' tab."
                     ),
+                    ui.tags.li(
+                        "To explore the Iris Dataset, click the 'Iris' tab."
+                    ),                    
                 ),
                 ui.tags.hr(),
                 ui.h2("Main Panel with Reactive Output"),
