@@ -23,7 +23,7 @@ def get_iris_inputs():
             "Petal Length (cm)",
             min=1,
             max=7,
-            value=[0, 3],
+            value=[1, 7],
         ),
         ui.tags.hr(),
         ui.tags.h3("Petal Width"),        
