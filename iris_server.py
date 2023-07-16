@@ -62,10 +62,10 @@ def get_iris_server_functions(input, output, session):
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
         width_max = input_petal_width_range[1]
-        condition1 = df["petal_length_cm"] >= length_min
-        condition2 = df["petal_length_cm"] <= length_max
-        condition3 = df["petal_width_cm"] >= width_min
-        condition4 = df["petal_width_cm"] <= width_max
+        condition1 = df["petal_length"] >= length_min
+        condition2 = df["petal_length"] <= length_max
+        condition3 = df["petal_width"] >= width_min
+        condition4 = df["petal_width"] <= width_max
         filter = condition1 & condition2 & condition3 & condition4
         df = df[filter]
         filtered_records = len(df)
@@ -85,10 +85,10 @@ def get_iris_server_functions(input, output, session):
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
         width_max = input_petal_width_range[1]
-        condition1 = df["petal_length_cm"] >= length_min
-        condition2 = df["petal_length_cm"] <= length_max
-        condition3 = df["petal_width_cm"] >= width_min
-        condition4 = df["petal_width_cm"] <= width_max
+        condition1 = df["petal_length"] >= length_min
+        condition2 = df["petal_length"] <= length_max
+        condition3 = df["petal_width"] >= width_min
+        condition4 = df["petal_width"] <= width_max
         filter = condition1 & condition2 & condition3 & condition4
         df = df[filter]
         return df
@@ -146,17 +146,17 @@ def get_iris_server_functions(input, output, session):
         length_max = input_petal_length_range[1]
         width_min = input_petal_width_range[0]
         width_max = input_petal_width_range[1]
-        condition1 = df["petal_length_cm"] >= length_min
-        condition2 = df["petal_length_cm"] <= length_max
-        condition3 = df["petal_width_cm"] >= width_min
-        condition4 = df["petal_width_cm"] <= width_max
+        condition1 = df["petal_length"] >= length_min
+        condition2 = df["petal_length"] <= length_max
+        condition3 = df["petal_width"] >= width_min
+        condition4 = df["petal_width"] <= width_max
         filter = condition1 & condition2 & condition3 & condition4
         df = df[filter]
 
         plt = sns.scatterplot(
             data=df,
-            x="petal_length_cm",
-            y="petal_width_cm",
+            x="petal_length",
+            y="petal_width",
             hue="species",
         )
         return plt
