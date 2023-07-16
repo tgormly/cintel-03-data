@@ -124,7 +124,7 @@ def get_iris_server_functions(input, output, session):
         df = original_df
 
         # Drop the 'Unnamed' index column
-        df = df.drop(columns=["Unnamed: 0"])
+        df = df.drop(columns=["index"])
 
         sns.set_theme(style="ticks")
         pairplot_grid = sns.pairplot(df, hue="species")
