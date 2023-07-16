@@ -33,7 +33,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.lumen(),
+    shinyswatch.theme.morph(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
@@ -119,6 +119,7 @@ def server(input, output, session):
 
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
+    get_iris_server_functions(input, output, session)
 
 
 app = App(app_ui, server)
