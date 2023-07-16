@@ -24,6 +24,10 @@ from penguins_server import get_penguins_server_functions
 from penguins_ui_inputs import get_penguins_inputs
 from penguins_ui_outputs import get_penguins_outputs
 
+from iris_server import get_iris_server_functions
+from iris_ui_inputs import get_iris_inputs
+from iris_ui_outputs import get_iris_outputs
+
 from util_logger import setup_logger
 
 logger, logname = setup_logger(__name__)
@@ -77,6 +81,13 @@ app_ui = ui.page_navbar(
         ui.layout_sidebar(
             get_penguins_inputs(),
             get_penguins_outputs(),
+        ),
+    ),
+    ui.nav(
+        "Iris",
+        ui.layout_sidebar(
+            get_iris_inputs(),
+            get_iris_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/tgormly")),
