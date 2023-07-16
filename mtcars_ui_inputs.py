@@ -11,7 +11,7 @@ from shiny import ui
 
 def get_mtcars_inputs():
     return ui.panel_sidebar(
-        ui.h2("MT Cars Interaction - Updated"),
+        ui.h2("MT Cars Interaction"),
         ui.tags.hr(),
         ui.input_slider(
             "MTCARS_MPG_RANGE",
@@ -20,6 +20,7 @@ def get_mtcars_inputs():
             max=35,
             value=[10, 35],
         ),
+        ui.tags.hr(),
         ui.input_checkbox_group(
             "Cylinders", 
             "Cylinders:", 
